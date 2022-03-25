@@ -17,6 +17,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { LoginComponent } from './login/login.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule, 
+    NgbModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'products', component: ProductsComponent },
@@ -47,7 +49,7 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
       { path: 'login', component: LoginComponent},
       { path: 'admin/products', component: AdminProductsComponent },
       { path: 'admin/orders', component: AdminOrdersComponent },
-    ])
+    ]), 
     
   ],
   providers: [],
